@@ -1,9 +1,10 @@
 # Image Board "Your best Polaroid"
 
 ## Summary
-This is a site where you can go and upload your picture and they will be shown as
-beautiful Polaroid. The images are intentionally displayed in a twisted way
-in order to give to the visitors a sense of naturalness and spontaneity.
+This is a site where you can upload your picture, and it will be shown as
+beautiful Polaroid. The images are intentionally displayed in a distorted manner
+in order to give to users a the feeling that they are looking at images splayed out on
+a kitchen table.
 
 ## Tech Stack
 * Backbone.js
@@ -12,12 +13,21 @@ in order to give to the visitors a sense of naturalness and spontaneity.
 * AWS S3 Cloud Storage
 
 ## Features
-* On the main page 12 picture are displayed as Polaroid
-* The user can upload his/her own images
-* Every time that an image is being loaded, it would be shown as the first one
-* If the users click on a single image, this will be shown at a bigger size
-* Inside the page that shows the single image, users can see the author and a description of the image
-* Users can write their own comments about the image.
-* Comments that have been made about the image are displayed in a reverse chronological order.
+* On the main page 12 picture are displayed as Polaroid images
+* The user can upload his/her own images using the upload function
+* Every time that an image is being loaded, it would be displayed as the first image from the left
+* If the user clicks on a single image, it will be magnified for more accessible viewing
+* Inside the single image page, users can see the author's name and a brief description of the image.
+* Users can post comments about the image.
+* Comments made on the image are displayed in a reverse chronological order.
 
-![Image Board](insert_comments.webm)
+![Image Board Homepage](homepage.png)
+
+****
+
+![Image Board Comments](comments.png)
+
+
+****
+
+![Image Board comments](comments-gif.gif)
