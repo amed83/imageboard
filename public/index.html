@@ -18,7 +18,10 @@
 
 
 <template id="homepage">
-
+    <div id = "title-container">
+        <h1>Your best Polaroid </h1>
+        <button id='uploadimg-button' type="button">Upload your images</button>
+    </div>
     <div id = "img-container">
         {{#each img}}
         <div id ="img-wrapper">
@@ -26,7 +29,7 @@
         </div>
         {{/each}}
     </div>
-    <button id='uploadimg-button' type="button">Upload your images</button>
+
 
     <div id="modal" class="hidden">
         <div id="uploadimg-container">
@@ -73,9 +76,9 @@
         {{/each}}
       </div>
       <div id= "insertComments-container">
-            <h2>Write here your comments</h2>
+            <h2>Write your comments</h2>
               <input class ="comment-input" type= "text" name="username" placeholder="name">
-              <textarea class = "comment-input " name="comment" placeholder="Comment"></textarea>
+              <textarea rows="5" cols="23" id ="comment-text" name="comment" placeholder="Comment"></textarea>
               <button id="saveComment">Insert Comment</button>
       </div>
 

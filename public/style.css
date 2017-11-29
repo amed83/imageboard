@@ -8,14 +8,24 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+#title-container{
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: 'Lobster',cursive;
+    font-size: 30px;
+    color:white;
+}
+
+
 #img-container{
-width: 90%;
+width: 70%;
 height: 580px;
 display: flex;
 flex-wrap: wrap;
 justify-content:space-around;
 margin:0 auto;
-margin-top: 80px;
+margin-top: 185px;
 }
 
 #img-wrapper{
@@ -51,7 +61,8 @@ margin-top: 80px;
     text-decoration: none;
     font-size: 72px;
     border-radius: 4px;
-    margin-left: 1100px;
+    margin-left: 1340px;
+    margin-top:10px;
 }
 
 #home-logo a:hover{
@@ -151,13 +162,12 @@ a:visited{
     margin-top: 8px;
 }
 
-
-
 #uploadimg-button{
     width:200px;
     height: 80px;
-    margin:0 auto;
-    margin-top: 180px;
+    /*margin:0 auto;*/
+    margin-left: 18px;
+    margin-top: -19px;
     background-color: #E3223B;
     font-size: 24px;
     font-weight: bold;
@@ -215,9 +225,11 @@ a:visited{
 
 #bigger{
     width: 650px;
+    margin-left: 40px;
     height: 500px;
     border-radius: 5px;
     z-index:99;
+    margin-top:30px;
 }
 
 #biggerImg-container{
@@ -243,7 +255,7 @@ a:visited{
 }
 
 #pastComments-container{
-    margin-top:-650px;
+    margin-top:-635px;
     margin-left:1200px;
     width: 450px;
 }
@@ -253,7 +265,7 @@ a:visited{
 }
 
 #created-at{
-    font-size:12px;
+    font-size:10px;
     color:#393C38;
 }
 
@@ -275,7 +287,8 @@ a:visited{
 
 #eachComment-container{
     background: #DADADA;
-    width:70%;
+    width:78%;
+    height:105px;
     border: 7px solid #ccc;
     border-radius: 4px;
     margin-top: 5px;
@@ -283,12 +296,16 @@ a:visited{
     line-height: 0.7;
 }
 
+#eachComment-container>p{
+    font-size: 20px;
+}
+
 #insertComments-container{
     /*border: solid red 3px;*/
-    width: 540px;
-    height: 210px;
+    width: 640px;
+    height: 340px;
     position: fixed;
-    top:69%;
+    top:60%;
     left:3%;
     display: flex;
     flex-flow: column;
@@ -306,16 +323,26 @@ a:visited{
 }
 
 .comment-input{
-    width: 240px;
-    height: 40px;
+    width: 242px;
+    height: 50px;
     font-family: helvetica,sans-serif;
-
+    font-size: 20px;
 }
 
+#comment-text{
+    font-family: helvetica,sans-serif;
+    font-size: 20px;
+}
+
+
 #insertComments-container >button {
-    width: 130px;
-    height: 40px;
+    width: 243px;
+    height: 45px;
     font-weight: bold;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color:#E3223B;
+    color:white;
 }
 
 #comments-form{
