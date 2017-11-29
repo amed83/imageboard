@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS images;
+DROP TABLE IF EXISTS comments;
+
+CREATE TABLE images(
+    id SERIAL PRIMARY KEY,
+    filename VARCHAR(300) NOT NULL,
+    username VARCHAR(255)NOT NULL,
+    title VARCHAR(255)NOT NULL,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE comments(
+   id SERIAL PRIMARY KEY,
+   username VARCHAR(250)NOT NULL,
+   imageId VARCHAR (250),
+   comment_Text VARCHAR(1000)NOT NULL,
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

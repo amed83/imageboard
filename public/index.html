@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<title>ImageBoard</title>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div id="main"></div>
+
+
+<template id="homepage">
+
+    <div id = "img-container">
+        {{#each img}}
+        <div id ="img-wrapper">
+            <a href="/#/image/{{id}}"><img id = "images" src="https://s3.amazonaws.com/spicedling/{{filename}}"><p>{{title}}</p></a>
+        </div>
+        {{/each}}
+    </div>
+    <button id='uploadimg-button' type="button">Upload your images</button>
+
+    <div id="modal" class="hidden">
+        <div id="uploadimg-container">
+            <div id="closeUpload">&times;</div>
+            <form action="/upload" method="POST">
+                <input type="file" name = "filename">
+                <input id="inputimg-name" type="text" name="title" placeholder="Give a title to this image">
+                <input id="inputimg-description" type="text" name="description" placeholder="Insert a short image description">
+                <input type="text" name="username" placeholder="Insert your name">
+                <button id="img-upload-button" name="upload">Upload</button>
+            </form>
+    </div>
+
+</template>
+
+
+
+<template id="biggerImg">
+    <div id ="biggerImg-container">
+
+        <img id = "bigger" src="https://s3.amazonaws.com/spicedling/{{image.filename}}">
+        <div id ="biggerImg-info">
+            <h3>{{image.description}}</h3>
+            <p><span style="font-style:italic">image uploaded by:</span> {{image.username}}</p>
+        </div>
+<div id="home-logo"><a href="/"><i class="fa fa-home" ></i></a></div>
+  </div>
+        <div id = "comments-form">
+        </div>
+
+</template>
+
+<template id="commentsForm">
+
+      <div id ="pastComments-container">
+           {{#each comments}}
+         <span class="tip tip-up"></span>
+          <div id ="eachComment-container">
+
+            <p id ="created-at">{{created_at}}</p>
+                <p> <span id="comment-username">{{username}}</span> added a comment:</p>
+                <p>{{comment_text}}<p>
+          </div>
+        {{/each}}
+      </div>
+      <div id= "insertComments-container">
+            <h2>Write here your comments</h2>
+              <input class ="comment-input" type= "text" name="username" placeholder="name">
+              <textarea class = "comment-input " name="comment" placeholder="Comment"></textarea>
+              <button id="saveComment">Insert Comment</button>
+      </div>
+
+</template>
+
+    <script src="/js/handlebars.min.js"></script>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/underscore-min.js"></script>
+    <script src="/js/backbone-min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/modal.js"></script>
+</body>
+
+</html>
